@@ -111,13 +111,13 @@ main() {
     // A shorter way you might write a Stream Trigger is like 
     // so
     StreamTrigger triggerWithStreamInjection = new StreamTrigger({
-    UTF8.encode("injectStreamHere") : () {
-      // Note, a stream of the same type can also be returned 
-      // here to merge one stream into another, like so.
-      return new File(new Uri.file('../README.md')
-        .toFilePath())
-        .openRead();
-    }
+        UTF8.encode("injectStreamHere") : () {
+          // Note, a stream of the same type can also be returned 
+          // here to merge one stream into another, like so.
+          return new File(new Uri.file('../README.md')
+            .toFilePath())
+            .openRead();
+        }
     });
     
     // Usage on a stream
